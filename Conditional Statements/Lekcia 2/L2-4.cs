@@ -1,18 +1,21 @@
-﻿//using System;
+using System;
 
-//namespace ConditionalStatements
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            double number = double.Parse(Console.ReadLine());
+namespace ConditionalStatements
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = Console.ReadLine();
 
-//            if(number >= 5.50)
-//            {
-//                Console.WriteLine("Excellent!");
-//            }
-//        }
-//    }
-//}
-
+            if(name == "s3cr3t!P@ssw0rd")
+            {
+                Console.WriteLine("Welcome");
+            }
+            else
+            {
+                Console.WriteLine("Wrong password!");
+            }
+        }
+    }
+}
