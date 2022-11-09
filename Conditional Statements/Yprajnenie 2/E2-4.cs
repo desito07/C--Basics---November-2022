@@ -22,6 +22,8 @@ namespace ConditionalStatements
             int toys = puzzels + dolls + bears + minions + trucks;
             double totalPrice = puzzelsPrice + dollsPrice + bearsPrice + minionsPrice + trucksPrice;
 
+            Console.WriteLine(totalPrice);
+
             if (toys >= 50)
             {
                 totalPrice -= (totalPrice * 25 / 100.00);
@@ -29,9 +31,9 @@ namespace ConditionalStatements
 
             double rent = totalPrice * 0.1;
             double total = totalPrice - rent;
+           
 
-
-            if (total >= tripCosts)
+            if (total > tripCosts)
             {
                 Console.WriteLine($"Yes! {(total - tripCosts):F2} lv left.");
             }
