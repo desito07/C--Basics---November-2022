@@ -15,7 +15,7 @@ namespace ConditionalStatements
 
             double swimmerTimeTotal = swimmerTime + delay;
 
-            if(swimmerTime <= recordTime)
+            if(swimmerTime < recordTime)
             {
                 Console.WriteLine($"Yes, he succeeded! The new world record is {swimmerTimeTotal:F2} seconds.");
             }
