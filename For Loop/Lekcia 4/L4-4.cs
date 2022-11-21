@@ -1,9 +1,19 @@
-﻿namespace For_Loop;
-class Program
+using System;
+
+namespace For_Loop
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        {
+            int num = int.Parse(Console.ReadLine());
+            for (int i = 0; i <= num; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(Math.Pow(2, i));
+                }
+            }
+        }
     }
 }
-
