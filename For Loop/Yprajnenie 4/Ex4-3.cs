@@ -7,11 +7,11 @@ namespace For_Loop_Exc
         static void Main(string[] args)
         {
             int num = int.Parse(Console.ReadLine());
-            int p1 = 0;
-            int p2 = 0;
-            int p3 = 0;
-            int p4 = 0;
-            int p5 = 0;
+            double p1 = 0.00;
+            double p2 = 0.00;
+            double p3 = 0.00;
+            double p4 = 0.00;
+            double p5 = 0.00;
 
             for (int i = 0; i < num; i++)
             {
@@ -38,12 +38,14 @@ namespace For_Loop_Exc
                     p5++;
                 }
             }
-            Console.WriteLine($"{p1 * 1.0 / num * 100:f2}%");
-            Console.WriteLine($"{p2 * 1.0 / num * 100:f2}%");
-            Console.WriteLine($"{p3 * 1.0 / num * 100:f2}%");
-            Console.WriteLine($"{p4 * 1.0 / num * 100:f2}%");
-            Console.WriteLine($"{p5 * 1.0 / num * 100:f2}%");
+            Console.WriteLine($"{p1 / num * 100:f2}%");
+            Console.WriteLine($"{p2 / num * 100:f2}%");
+            Console.WriteLine($"{p3 / num * 100:f2}%");
+            Console.WriteLine($"{p4 / num * 100:f2}%");
+            Console.WriteLine($"{p5 / num * 100:f2}%");
         }
     }
-    
+
 }
+
+
