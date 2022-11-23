@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "9MsKDOZhcp0fO5MTGZDIAoCJxX/zCVP1TB8o+CQ3ufiW/UfsKzMyS5P8eIoMYhltMES4zUj4V6rujLyWqCJsuQ==",
+  "success": true,
+  "projectFilePath": "/Users/ng-00108/Desktop/Desi Stuff/SoftUni_CSharpBasics_Course/Exams Prep/Exams Prep.csproj",
+  "expectedPackageFiles": [
+    "/Users/ng-00108/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "/Users/ng-00108/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.31/microsoft.netcore.app.host.osx-x64.3.1.31.nupkg.sha512",
+    "/Users/ng-00108/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
