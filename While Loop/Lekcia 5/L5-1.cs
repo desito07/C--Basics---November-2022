@@ -1,15 +1,19 @@
-﻿//using System;
+using System;
 
-//namespace For_Loop
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            for (int i = 1; i <= 100; i++)
-//            {
-//                Console.WriteLine(i);
-//            }
-//        }
-//    }
-//}
+namespace For_Loop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string command = Console.ReadLine();
+
+            while(command != "Stop")
+            {
+                Console.WriteLine(command);
+
+                command = Console.ReadLine();
+            }
+        }
+    }
+}
