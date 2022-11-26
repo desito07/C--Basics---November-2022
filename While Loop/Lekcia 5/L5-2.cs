@@ -1,16 +1,22 @@
-﻿//using System;
+using System;
 
-//namespace For_Loop
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            int num = int.Parse(Console.ReadLine());
-//            for (int i = num; i >= 1; i--)
-//            {
-//                Console.WriteLine(i);
-//            }
-//        }
-//    }
-//}
+namespace For_Loop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string username = Console.ReadLine();
+            string password = Console.ReadLine();
+
+            string input = Console.ReadLine();
+
+            while(input != password)
+            {
+                input = Console.ReadLine();
+
+            }
+            Console.WriteLine($"Welcome {username}!");
+        }
+    }
+}
