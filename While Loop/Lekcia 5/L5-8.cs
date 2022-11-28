@@ -1,31 +1,41 @@
-﻿
-//using System;
 
-//namespace For_Loop
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            int numbersN = int.Parse(Console.ReadLine());
-//            int smallest = int.MaxValue;
-//            int biggest = int.MinValue;
+using System;
 
-//            for (int i = 0; i < numbersN; i++)
-//            {
-//                int currentNumber = int.Parse(Console.ReadLine());
-//                if (currentNumber < smallest)
-//                {
-//                    smallest = currentNumber;
-//                }
-//                if (currentNumber >= biggest)
-//                {
-//                    biggest = currentNumber;
-//                }
-//            }
-//            Console.WriteLine($"Max number: {biggest}");
-//            Console.WriteLine($"Min number: {smallest}");
+namespace For_Loop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = Console.ReadLine();
+            int excludedCounter = 0;
+            int grade = 1;
+            double sum = 0.0;
 
-//        }
-//    }
-//}
+            while(grade <= 12)
+            {
+
+                double currentGrade = double.Parse(Console.ReadLine());
+                
+
+                if(currentGrade < 4)
+                {
+                    excludedCounter++;
+                }
+                if(excludedCounter == 2)
+                {
+                    Console.WriteLine($"{name} has been excluded at {grade - 1} grade");
+                    break;
+                }
+
+                sum += currentGrade;
+                grade++;
+            }
+            double avg = sum / 12;
+            if(excludedCounter < 2)
+            {
+                Console.WriteLine($"{name} graduated. Average grade: {avg:f2}");
+            }
+        }
+    }
+}
