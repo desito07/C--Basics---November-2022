@@ -1,21 +1,25 @@
-﻿//using System;
+using System;
 
-//namespace For_Loop
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            int numbersN = int.Parse(Console.ReadLine());
-           
-//            int sum = 0;
-//            for (int i = 1; i <= numbersN; i++)
-//            {
+namespace For_Loop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string command = Console.ReadLine();
+            double minNum = double.MaxValue;
 
-//                int currentNum = int.Parse(Console.ReadLine());
-//                sum += currentNum;
-//            }
-//            Console.WriteLine(sum);
-//        }
-//    }
-//}
+            while (command != "Stop")
+            {
+                double commandNum = double.Parse(command);
+                if (commandNum < minNum)
+                {
+                    minNum = commandNum;
+                }
+                command = Console.ReadLine();
+            }
+            Console.WriteLine(minNum);
+
+        }
+    }
+}
