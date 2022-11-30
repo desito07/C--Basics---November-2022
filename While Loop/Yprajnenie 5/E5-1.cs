@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace L4_10
 {
@@ -6,33 +7,31 @@ namespace L4_10
     {
         static void Main(string[] args)
         {
-            int num = int.Parse(Console.ReadLine());
-            int leftSum = 0;
-            int rightSum = 0;
+            string favBook = Console.ReadLine();
+            int counter = 0;
+            bool isFound = false;
 
-            for (int i = 1; i <= num; i++)
+            string currentBook = Console.ReadLine();
+
+            while(currentBook != "No more Books")
             {
-
-                int currentNum = int.Parse(Console.ReadLine());
-
-                if (i % 2 == 0)
+                if(currentBook == favBook)
                 {
-                    leftSum += currentNum;
+                    isFound = true;
+                    break;
                 }
-                else
-                {
-                    rightSum += currentNum;
-                }
+                counter++;
+
+                currentBook = Console.ReadLine();
             }
-            if (leftSum == rightSum)
+            if (isFound)
             {
-                Console.WriteLine("Yes");
-                Console.WriteLine($"Sum = {leftSum}");
+                Console.WriteLine($"You checked {counter} books and found it.");
             }
             else
             {
-                Console.WriteLine("No");
-                Console.WriteLine($"Diff = {Math.Abs(rightSum - leftSum)}");
+                Console.WriteLine("The book you search is not here!");
+                Console.WriteLine($"You checked {counter} books.");
             }
         }
     }
