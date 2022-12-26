@@ -1,4 +1,4 @@
-﻿using System;
+using System;  
 
 namespace L4_10
 {
@@ -6,33 +6,49 @@ namespace L4_10
     {
         static void Main(string[] args)
         {
-            int num = int.Parse(Console.ReadLine());
-            int leftSum = 0;
-            int rightSum = 0;
+            int maxBadGrades = int.Parse(Console.ReadLine());
+            int counter = 0;
+            string lastProblem = "";
+            int solvedProblems = 0;
+            double sum = 0.00;
 
-            for (int i = 1; i <= num; i++)
+
+            while (true)
             {
+                string command = Console.ReadLine();
+                
 
-                int currentNum = int.Parse(Console.ReadLine());
+                if(command == "Enough")
+                {
+                    break;
+                }
+                lastProblem = command;
+                solvedProblems++;
+                int currentGrade = int.Parse(Console.ReadLine());
+                sum += currentGrade;
 
-                if (i % 2 == 0)
+                if (currentGrade <= 4)
                 {
-                    leftSum += currentNum;
+                    counter++;
+                    
                 }
-                else
+                if(maxBadGrades == counter)
                 {
-                    rightSum += currentNum;
+                    break;
                 }
+               
             }
-            if (leftSum == rightSum)
+
+           
+            if (maxBadGrades == counter)
             {
-                Console.WriteLine("Yes");
-                Console.WriteLine($"Sum = {leftSum}");
+                Console.WriteLine($"You need a break, {counter} poor grades.");
             }
             else
             {
-                Console.WriteLine("No");
-                Console.WriteLine($"Diff = {Math.Abs(rightSum - leftSum)}");
+                Console.WriteLine($"Average score: {sum / solvedProblems:f2}");
+                Console.WriteLine($"Number of problems: {solvedProblems}");
+                Console.WriteLine($"Last problem: {lastProblem}");
             }
         }
     }
