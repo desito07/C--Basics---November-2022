@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using static System.Reflection.Metadata.BlobBuilder;
 
 namespace L4_10
@@ -7,22 +8,26 @@ namespace L4_10
     {
         static void Main(string[] args)
         {
-            string favBook = Console.ReadLine();
+
+            string wantedBook = Console.ReadLine();
             int counter = 0;
+
             bool isFound = false;
-
-            string currentBook = Console.ReadLine();
-
-            while(currentBook != "No more Books")
+            while (true)
             {
-                if(currentBook == favBook)
+                string command = Console.ReadLine();
+
+                if(command == "No More Books")
+                {
+                    break;
+                }
+
+                if(command == wantedBook)
                 {
                     isFound = true;
                     break;
                 }
                 counter++;
-
-                currentBook = Console.ReadLine();
             }
             if (isFound)
             {
@@ -36,5 +41,6 @@ namespace L4_10
         }
     }
 }
+
 
 
