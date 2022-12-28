@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace L4_10
 {
@@ -6,36 +6,37 @@ namespace L4_10
     {
         static void Main(string[] args)
         {
-            int num = int.Parse(Console.ReadLine());
-            int leftSum = 0;
-            int rightSum = 0;
+            int stepsNeeded = 10000;
+            int sumSteps = 0;
 
-            for (int i = 1; i <= num; i++)
+            while (true)
             {
+                
+                string input = Console.ReadLine();
+                
 
-                int currentNum = int.Parse(Console.ReadLine());
-
-                if (i % 2 == 0)
+                if(input == "Going home")
                 {
-                    leftSum += currentNum;
+                    sumSteps += int.Parse(Console.ReadLine());
+                    break;
                 }
-                else
+               
+                sumSteps += int.Parse(input);
+                if(sumSteps >= stepsNeeded)
                 {
-                    rightSum += currentNum;
+                    break;
                 }
             }
-            if (leftSum == rightSum)
+            if (sumSteps >= stepsNeeded)
             {
-                Console.WriteLine("Yes");
-                Console.WriteLine($"Sum = {leftSum}");
+                Console.WriteLine($"Goal reached! Good job!");
+                Console.Write($"{sumSteps - stepsNeeded} steps over the goal!");
             }
             else
             {
-                Console.WriteLine("No");
-                Console.WriteLine($"Diff = {Math.Abs(rightSum - leftSum)}");
+                Console.WriteLine($"{stepsNeeded - sumSteps} more steps to reach goal.");
             }
         }
     }
 }
-
 
