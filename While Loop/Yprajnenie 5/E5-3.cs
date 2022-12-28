@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace L4_10
 {
@@ -6,36 +6,55 @@ namespace L4_10
     {
         static void Main(string[] args)
         {
-            int num = int.Parse(Console.ReadLine());
-            int leftSum = 0;
-            int rightSum = 0;
+            double moneyNeeded = double.Parse(Console.ReadLine());
+            double moneyAvailable = double.Parse(Console.ReadLine());
+            int counter = 0;
+            int spendingCounter = 0; 
 
-            for (int i = 1; i <= num; i++)
+
+            while (true)
             {
+                string command = Console.ReadLine();
+                double currentMoney = double.Parse(Console.ReadLine());
+                counter++;
 
-                int currentNum = int.Parse(Console.ReadLine());
-
-                if (i % 2 == 0)
+                if (command == "save")
                 {
-                    leftSum += currentNum;
+                    moneyAvailable += currentMoney;
+                    spendingCounter = 0;
+                  
                 }
-                else
+                else if(command == "spend")
                 {
-                    rightSum += currentNum;
+                    moneyAvailable -= currentMoney;
+                    spendingCounter++;
+                    if (moneyAvailable < 0)
+                    {
+                        moneyAvailable = 0;
+                    }
+                }
+
+               
+
+                if(spendingCounter == 5)
+                {
+                    Console.WriteLine("You can't save the money.");
+                    Console.WriteLine(counter);
+                    break;
+                }
+
+                if(moneyNeeded <= moneyAvailable)
+                {
+                    break;
                 }
             }
-            if (leftSum == rightSum)
+
+            if (moneyNeeded <= moneyAvailable)
             {
-                Console.WriteLine("Yes");
-                Console.WriteLine($"Sum = {leftSum}");
+                Console.WriteLine($"You saved the money for {counter} days.");
             }
-            else
-            {
-                Console.WriteLine("No");
-                Console.WriteLine($"Diff = {Math.Abs(rightSum - leftSum)}");
-            }
+
         }
     }
 }
-
 
