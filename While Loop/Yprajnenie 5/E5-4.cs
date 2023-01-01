@@ -6,57 +6,39 @@ namespace L4_10
     {
         static void Main(string[] args)
         {
-            decimal change = decimal.Parse(Console.ReadLine());
-            int counter = 0;
+            int stepsNeeded = 10000;
+            int sumSteps = 0;
 
-            while (change > 0)
+            while (true)
             {
-            
-                    if (change >= 2)
-                    {
-                        change -= 2;
-                        counter++;
-                    }
-                    else if (change >= 1)
-                    {
-                        change -= 1;
-                        counter++;
-                    }
-                    else if (change >= 0.5m)
-                    {
-                        change -= 0.5m;
-                        counter++;
-                    }
-                    else if (change >= 0.2m)
-                    {
-                        change -= 0.2m;
-                        counter++;
-                    }
-                    else if (change >= 0.1m)
-                    {
-                        change -= 0.1m;
-                        counter++;
-                    }
-                    else if (change >= 0.05m)
-                    {
-                        change -= 0.05m;
-                        counter++;
-                    }
-                else if (change >= 0.02m)
-                    {
-                        change -= 0.02m;
-                        counter++;
-                    }
-                    else
-                    {
-                        change -= 0.01m;
-                        counter++;
-                    }
-            }
-            Console.WriteLine(counter);
-           
 
+                string input = Console.ReadLine();
+
+
+                if (input == "Going home")
+                {
+                    sumSteps += int.Parse(Console.ReadLine());
+                    break;
+                }
+
+                sumSteps += int.Parse(input);
+                if (sumSteps >= stepsNeeded)
+                {
+                    break;
+                }
+            }
+            if (sumSteps >= stepsNeeded)
+            {
+                Console.WriteLine($"Goal reached! Good job!");
+                Console.Write($"{sumSteps - stepsNeeded} steps over the goal!");
+            }
+            else
+            {
+                Console.WriteLine($"{stepsNeeded - sumSteps} more steps to reach goal.");
+            }
         }
     }
 }
+
+
 
