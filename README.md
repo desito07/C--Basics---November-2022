@@ -4,9 +4,9 @@ https://softuni.bg/trainings/3875/programming-basics-with-csharp-november-2022#l
 
 Topics:
 
-1_First Steps In Coding
-2_Conditional Statements
-3_Conditional Statements Advanced
-4_For Loop
-5_While Loop
-6_Nested Loops
+* First Steps In Coding
+* Conditional Statements
+* Conditional Statements Advanced
+* For Loop
+* While Loop
+* Nested Loops
